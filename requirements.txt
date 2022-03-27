@@ -1,0 +1,7 @@
+autobahn
+twisted
+bs4
+requests
+lxml
+asyncio
+cloudscraper
