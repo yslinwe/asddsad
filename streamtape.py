@@ -80,6 +80,7 @@ def subfolder_conent(login, key, folder_id):
 
 
 def create_folder(login, key, folder_name, parent_folder_id):
+    folder_name = folder_name.replace('%','%25').replace('#','%23').replace('&','%26')
     url = f'https://api.streamtape.com/file/createfolder?login={login}&key={key}&name={folder_name}' \
           f'&pid={parent_folder_id}'
     data = requests.get(url).json()
