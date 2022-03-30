@@ -206,7 +206,6 @@ def getFileInfo(fileDictInfo,thumbLinks,folderName,achorname,subscribe,avatarImg
 def getFolderInfo(indexList,thumbLinks,achorname,subscribe,avatarImg,folder):
     parentfolder_id = folder['id']
     folderName = folder['name'] #作为标题名称
-    print(folderName)
     # if(isHas(indexList,folderName)):
     #     continue
     data = streamtape.subfolder_conent(login,key,parentfolder_id)
@@ -216,6 +215,7 @@ def getFolderInfo(indexList,thumbLinks,achorname,subscribe,avatarImg,folder):
     fileDictInfo =  getfileList(fileDict)
     fileList=[]
     firstFileId = ''
+    print(folderName)
     if isNeedUpdate(fileDict,fileDictInfo):
         if len(fileDict)>0:
             flagInIndex = False
