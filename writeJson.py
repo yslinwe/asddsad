@@ -339,6 +339,10 @@ def getJson():
                 json.dump(tktubeList,f)
             with open(f'json/category/otherindex.json',"w",encoding="utf-8") as f:
                 json.dump(elelist,f)
+            corpus = []
+            for info in indexList:
+                corpus.append(info['folderName'])
+            getClass(corpus,indexList)
 # try:
 #     with open(os.path.join('json','index.json'),"r",encoding="utf-8") as f:
 #         indexList = json.load(f)  
