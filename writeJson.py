@@ -229,6 +229,41 @@ def getFolderInfo(indexList,thumbLinks,achorname,subscribe,avatarImg,folder):
                     indexList.append(firstFile)
                 return firstFileId,fileList,indexList    
     return '',[],indexList  
+import jieba
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
+def getClass(corpus,jsonMsg):
+    cutCorpus = []
+    for sen in corpus:
+        seg_list = jieba.cut(sen)
+        cutCorpus.append(' '.join(list(seg_list))) 
+    #将文本中的词语转换为词频矩阵
+    #计算个词语出现的次数
+    #类调用
+    transformer = TfidfTransformer()
+    tfidf_vectorizer = TfidfVectorizer(max_df=0.95, min_df=2, #max_features=n_features,
+                                   stop_words='english')
+    #将词频矩阵X统计成TF-IDF值
+    X = tfidf_vectorizer.fit_transform(cutCorpus)#计算所有语句中 词语出现的次数 词频
+
+    tfidf = transformer.fit_transform(X)#TF就是计算一篇文章中每个词语出现的次数、IDF就是这个词语在所有文章中出现的次数，TF除以IDF就是权重值；
+
+    SimMatrix = (tfidf * tfidf.T).A
+    num = (SimMatrix.shape[0])
+  
+    for i in range(num):
+        infoDict = {}
+        for j in range(num):
+            info = jsonMsg[j]
+            ralateRate =  SimMatrix[i,j]
+            infoDict[ralateRate] = info
+        ralateList = sorted(infoDict.items(), key=lambda item:item[0],reverse=True)
+        linkid = (ralateList[0][1]['linkid'])
+        ralateDictList = []
+        for ralateTuple in ralateList[:50]:
+            ralateDictList.append(ralateTuple[1])
+        with open('json/ralate/'+linkid+'.json','w') as f:
+            json.dump(ralateDictList,f)
 def getJson():
     mkdir('json')
     try:
