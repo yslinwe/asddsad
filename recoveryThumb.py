@@ -12,7 +12,7 @@ import streamtape
 import cloudscraper,random,time
 import concurrent.futures
 from functools import partial
-ids = ['HNDS-075','MIAA-604','SSIS-336','JUL-883','EBOD-883','EBOD-897','EBOD-890','HMN-117','MIAA-604','MEYD-747','HMN-136','IPX-835','MIAA-604','JUL-886','SSIS-328','SSIS-332','IPX-836','IPX-840','JUL-872','HMN-126','MIAA-581','HMN-127','IPX-833','BOBB-333','SSIS-333','SSIS-329','SSIS-343','SSIS-330','MIAA-596']
+ids = ['MIDV-054','MIAA-578']
 
 def getlink(links,info):
     # if not info['linkid'] in links.keys():
