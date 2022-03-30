@@ -266,6 +266,10 @@ def getClass(corpus,jsonMsg):
             json.dump(ralateDictList,f)
 def getJson():
     mkdir('json')
+    mkdir('json/category')
+    mkdir('json/ralate')
+    mkdir('json/index')
+    mkdir('json/video')
     try:
         with open(os.path.join('json','index.json'),"r",encoding="utf-8") as f:
             indexList = json.load(f)  
