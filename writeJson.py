@@ -249,7 +249,7 @@ def getClass(corpus,jsonMsg):
 
     tfidf = transformer.fit_transform(X)#TF就是计算一篇文章中每个词语出现的次数、IDF就是这个词语在所有文章中出现的次数，TF除以IDF就是权重值；
 
-    SimMatrix = (tfidf * tfidf.T).A
+    SimMatrix = (tfidf * tfidf.T) 
     num = (SimMatrix.shape[0])
   
     for i in range(num):
