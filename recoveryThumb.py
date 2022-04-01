@@ -45,14 +45,14 @@ def getlink(links,info):
     return links
     
 keys = [
-    "d8zkYB0L22Uk47B","QWYGp3Mo3ds0LrD","Ox7xKAPozyik72","dasd-949","4vb94XaK9YhKlWx","YGVb92bjb4ivblp","rBxDk3gJrZSbq2m","hmn-136","ZX3wYDK2mdio7m","meyd-746","meyd-748","meyd-747","miaa-599","ssis-285","jul-884","1ABvBbAyB0s0Kd","lAqb8mv2B4i7MWr","voB9vZvjg4S4v4o","we1aArAV1xsJ02w","0Wapd2DG0WsAdK","MoqrvdVglgFoYv","wlxegXjxKWCJZLr","4PYVq1LPwACKe17","wgDWr4KPPaIJmbw","7j4Z7YlJbaCA7qB","mgWqejbDbwIbrYA","4GKqqjvB3XSKj0X","GjW9yyg6ZOUVyl","Me7dVbqkD2tmZqP","b3lQZJjo8RcPzXP","Wogae8woGpUbPlY","bpxY4oQMl7UPrlz","kZxQGdeQzDHOOZJ","MazPlVeokRUm339","8R9akj77k0togvY","qM8o3P741LTzpBq","J067JQDJR1CVaq","G3eXQk7d7oI1MRP","weLG8382W3clbW","WXAzM9YMOmFbbO1","XkPRJBe2GgcDRxa","re81VDKRZvfbQm0","k2Q9Gaw0GaTDXo","ssis-269","ggz9o6MdjXTq7W7","GK9oPwagdWh1R9l","WwPL8Zvvl2spWl","BJrq1oaKa3Cyoyr","PvMKbw0aWrFgwx","r30Dx4p361fbDrB","QP3WZlZMaaT0DqM","02dZGPyykYtZky","o97ZbjJDxLtJaxz","17vB2emaDWSe48o","k9DlQL2MoxFO7eb","m3kKpLV3kzHbJA6","DPpxLL92AAck77K","B4YjAd3RyZuyOXP","6XvkWa3jvZILmk","l2Xya0O0odf717g","3qbXK3vzb9Tddj8","3Jy9GBABg8cdJGy","0zvMZKOejmCLrz"
+    "bpxY4oQMl7UPrlz","k2Q9Gaw0GaTDXo","kZxQGdeQzDHOOZJ","WXAzM9YMOmFbbO1","02dZGPyykYtZky","QP3WZlZMaaT0DqM","r30Dx4p361fbDrB","mgWqejbDbwIbrYA","b3lQZJjo8RcPzXP","re81VDKRZvfbQm0","XkPRJBe2GgcDRxa","GjW9yyg6ZOUVyl","3Jy9GBABg8cdJGy","3qbXK3vzb9Tddj8","l2Xya0O0odf717g","QWYGp3Mo3ds0LrD","WwPL8Zvvl2spWl","BJrq1oaKa3Cyoyr","ggz9o6MdjXTq7W7","ssis-269","PvMKbw0aWrFgwx","4GKqqjvB3XSKj0X","4PYVq1LPwACKe17","Me7dVbqkD2tmZqP","wlxegXjxKWCJZLr","MazPlVeokRUm339","GK9oPwagdWh1R9l","wgDWr4KPPaIJmbw","7j4Z7YlJbaCA7qB","Wogae8woGpUbPlY","qM8o3P741LTzpBq","G3eXQk7d7oI1MRP","weLG8382W3clbW","o97ZbjJDxLtJaxz","0zvMZKOejmCLrz","17vB2emaDWSe48o","k9DlQL2MoxFO7eb","DPpxLL92AAck77K","m3kKpLV3kzHbJA6","B4YjAd3RyZuyOXP","6XvkWa3jvZILmk","8R9akj77k0togvY","hmn-136","meyd-748","meyd-747","miaa-599","ssis-285","jul-884"
 ]
 # for key in keys:
-# url = f'https://raw.githubusercontent.com/popoYSL/asddsad/main/json/index.json'
-# req = requests.get(url,timeout=10)
-# indexList = json.loads(req.text)
-with open('json/index.json',"r",encoding="utf-8") as f:
-    indexList = json.load(f)
+url = f'https://raw.githubusercontent.com/popoYSL/asddsad/main/json/index.json'
+req = requests.get(url,timeout=10)
+indexList = json.loads(req.text)
+# with open('json/index.json',"r",encoding="utf-8") as f:
+#     indexList = json.load(f)
 for indexDict in indexList:
     if indexDict['linkid'] in keys:
         folderName = indexDict['folderName']
