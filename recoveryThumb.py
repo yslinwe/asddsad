@@ -45,12 +45,14 @@ def getlink(links,info):
     return links
     
 keys = [
-    "BOOQRyBd2JuV0J","QWYGp3Mo3ds0LrD","wYGQbX6LwgFxG3","PvMKbw0aWrFgwx","BJrq1oaKa3Cyoyr","weLG8382W3clbW","lxgM6ZmGvqcZ0q","OWkdmQpg68FZ8VV","0z911xRxeZtAdq","qM8o3P741LTzpBq","AKJA9aX2L0sXrW1","02dZGPyykYtZky","GAJyok9DXOF1Gey","DPpxLL92AAck77K","rBOpGLWZP8tbZM8","o97ZbjJDxLtJaxz","WwY4YL9mxAubxrD","8Rdlxex3egFjGW","17vB2emaDWSe48o","pD1DdO9KzQtrZxm","VyK2m19AAGCKpV3","0zvMZKOejmCLrz","9ovQLjolaOsaQ0o","ssis-285","j7j1MggAYBSLvj","23D9L4lgq6sQ3j","QgWDljV99Gc000m","miaa-599","meyd-747","dk98lL0jlLuk6YP","m3kKpLV3kzHbJA6","k9DlQL2MoxFO7eb","3rrB1dmyzeTdz4X","6XvkWa3jvZILmk","hmn-136","meyd-748","6XleAOy4oZI9zLo","KXy2l77KlRSbMR","B4YjAd3RyZuyOXP","llVO9Vv6WkUBem","P89wY2KaGMU0mR1","jul-884","RXwB4vejBaIdv0X","880BdeL8G6ior7M","XkbMzQrA0dUDk41","Rem1PPpWPjcdG1l","p13Rybp2JOSr38x","Y6JYZq0JyMhprz","G3eXQk7d7oI1MRP","0zV0J7BVdaiKvR","wlxegXjxKWCJZLr","4PYVq1LPwACKe17","ZXmLxQJX0yUMBx","ez3y04da3oCYVlg","wlArOQQOLbTJbOA","7j4Z7YlJbaCA7qB","DkblBlgWBwcBv7","wgDWr4KPPaIJmbw","WQkGyaLdAdibVeW","YBXr7mW7xaIvXWO","xPOdvV7K8vikOGP","xoko88Amb4T9DG","mgWqejbDbwIbrYA","GjW9yyg6ZOUVyl","9pzrWyerpdTY9G","4GKqqjvB3XSKj0X","OJlKQX4qkztZd2D","Wogae8woGpUbPlY","Me7dVbqkD2tmZqP","zQ21V9PDLghYY2J","b3lQZJjo8RcPzXP","qjvPA382b1sz8v8","KQZwbYAKqRH0q9l","3qbXK3vzb9Tddj8","3Jy9GBABg8cdJGy","J38ArVOblPujjQB","l2Xya0O0odf717g","kZxQGdeQzDHOOZJ","2oKOvd3R1pcP1b","YDVbbk82PGFvg6O","bpxY4oQMl7UPrlz","k2Q9Gaw0GaTDXo","XkPRJBe2GgcDRxa","re81VDKRZvfbQm0","D0prmBYoOGtkKGR","WXAzM9YMOmFbbO1","4v1ma4KoDAtKKLj","lOy0DJlLdXT7qlG","WwPL8Zvvl2spWl","ssis-269","P8KmW6L6VAsbmd","ggz9o6MdjXTq7W7","MazPlVeokRUm339","zXDB6jdPP7ukwM","GK9oPwagdWh1R9l","opgl7gAV9bcK1R","QP3WZlZMaaT0DqM","r30Dx4p361fbDrB","lAVdOkqYrGHvxQ","8R9akj77k0togvY",
+    "d8zkYB0L22Uk47B","QWYGp3Mo3ds0LrD","Ox7xKAPozyik72","dasd-949","4vb94XaK9YhKlWx","YGVb92bjb4ivblp","rBxDk3gJrZSbq2m","hmn-136","ZX3wYDK2mdio7m","meyd-746","meyd-748","meyd-747","miaa-599","ssis-285","jul-884","1ABvBbAyB0s0Kd","lAqb8mv2B4i7MWr","voB9vZvjg4S4v4o","we1aArAV1xsJ02w","0Wapd2DG0WsAdK","MoqrvdVglgFoYv","wlxegXjxKWCJZLr","4PYVq1LPwACKe17","wgDWr4KPPaIJmbw","7j4Z7YlJbaCA7qB","mgWqejbDbwIbrYA","4GKqqjvB3XSKj0X","GjW9yyg6ZOUVyl","Me7dVbqkD2tmZqP","b3lQZJjo8RcPzXP","Wogae8woGpUbPlY","bpxY4oQMl7UPrlz","kZxQGdeQzDHOOZJ","MazPlVeokRUm339","8R9akj77k0togvY","qM8o3P741LTzpBq","J067JQDJR1CVaq","G3eXQk7d7oI1MRP","weLG8382W3clbW","WXAzM9YMOmFbbO1","XkPRJBe2GgcDRxa","re81VDKRZvfbQm0","k2Q9Gaw0GaTDXo","ssis-269","ggz9o6MdjXTq7W7","GK9oPwagdWh1R9l","WwPL8Zvvl2spWl","BJrq1oaKa3Cyoyr","PvMKbw0aWrFgwx","r30Dx4p361fbDrB","QP3WZlZMaaT0DqM","02dZGPyykYtZky","o97ZbjJDxLtJaxz","17vB2emaDWSe48o","k9DlQL2MoxFO7eb","m3kKpLV3kzHbJA6","DPpxLL92AAck77K","B4YjAd3RyZuyOXP","6XvkWa3jvZILmk","l2Xya0O0odf717g","3qbXK3vzb9Tddj8","3Jy9GBABg8cdJGy","0zvMZKOejmCLrz"
 ]
 # for key in keys:
-url = f'https://raw.githubusercontent.com/popoYSL/asddsad/main/json/index.json'
-req = requests.get(url,timeout=10)
-indexList = json.loads(req.text)
+# url = f'https://raw.githubusercontent.com/popoYSL/asddsad/main/json/index.json'
+# req = requests.get(url,timeout=10)
+# indexList = json.loads(req.text)
+with open('json/index.json',"r",encoding="utf-8") as f:
+    indexList = json.load(f)
 for indexDict in indexList:
     if indexDict['linkid'] in keys:
         folderName = indexDict['folderName']
@@ -59,8 +61,6 @@ for indexDict in indexList:
             ids.append(m[0])
 with open('link.json',"r",encoding="utf-8") as f:
     links = json.load(f)
-with open('json/index.json',"r",encoding="utf-8") as f:
-    indexList = json.load(f)
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
     for result in executor.map(partial(getlink, links), indexList):
         linkDict = (result)
