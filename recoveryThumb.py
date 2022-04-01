@@ -12,7 +12,8 @@ import streamtape
 import cloudscraper,random,time
 import concurrent.futures
 from functools import partial
-ids = ['JUL-874','JUL-887','SSIS-331','IPX-828','MEYD-748','MIDV-050']
+
+ids = []
 
 def getlink(links,info):
     # if not info['linkid'] in links.keys():
@@ -43,7 +44,19 @@ def getlink(links,info):
                 time.sleep(random.randint(1,3)) 
     return links
     
-
+keys = [
+    "BOOQRyBd2JuV0J","QWYGp3Mo3ds0LrD","wYGQbX6LwgFxG3","PvMKbw0aWrFgwx","BJrq1oaKa3Cyoyr","weLG8382W3clbW","lxgM6ZmGvqcZ0q","OWkdmQpg68FZ8VV","0z911xRxeZtAdq","qM8o3P741LTzpBq","AKJA9aX2L0sXrW1","02dZGPyykYtZky","GAJyok9DXOF1Gey","DPpxLL92AAck77K","rBOpGLWZP8tbZM8","o97ZbjJDxLtJaxz","WwY4YL9mxAubxrD","8Rdlxex3egFjGW","17vB2emaDWSe48o","pD1DdO9KzQtrZxm","VyK2m19AAGCKpV3","0zvMZKOejmCLrz","9ovQLjolaOsaQ0o","ssis-285","j7j1MggAYBSLvj","23D9L4lgq6sQ3j","QgWDljV99Gc000m","miaa-599","meyd-747","dk98lL0jlLuk6YP","m3kKpLV3kzHbJA6","k9DlQL2MoxFO7eb","3rrB1dmyzeTdz4X","6XvkWa3jvZILmk","hmn-136","meyd-748","6XleAOy4oZI9zLo","KXy2l77KlRSbMR","B4YjAd3RyZuyOXP","llVO9Vv6WkUBem","P89wY2KaGMU0mR1","jul-884","RXwB4vejBaIdv0X","880BdeL8G6ior7M","XkbMzQrA0dUDk41","Rem1PPpWPjcdG1l","p13Rybp2JOSr38x","Y6JYZq0JyMhprz","G3eXQk7d7oI1MRP","0zV0J7BVdaiKvR","wlxegXjxKWCJZLr","4PYVq1LPwACKe17","ZXmLxQJX0yUMBx","ez3y04da3oCYVlg","wlArOQQOLbTJbOA","7j4Z7YlJbaCA7qB","DkblBlgWBwcBv7","wgDWr4KPPaIJmbw","WQkGyaLdAdibVeW","YBXr7mW7xaIvXWO","xPOdvV7K8vikOGP","xoko88Amb4T9DG","mgWqejbDbwIbrYA","GjW9yyg6ZOUVyl","9pzrWyerpdTY9G","4GKqqjvB3XSKj0X","OJlKQX4qkztZd2D","Wogae8woGpUbPlY","Me7dVbqkD2tmZqP","zQ21V9PDLghYY2J","b3lQZJjo8RcPzXP","qjvPA382b1sz8v8","KQZwbYAKqRH0q9l","3qbXK3vzb9Tddj8","3Jy9GBABg8cdJGy","J38ArVOblPujjQB","l2Xya0O0odf717g","kZxQGdeQzDHOOZJ","2oKOvd3R1pcP1b","YDVbbk82PGFvg6O","bpxY4oQMl7UPrlz","k2Q9Gaw0GaTDXo","XkPRJBe2GgcDRxa","re81VDKRZvfbQm0","D0prmBYoOGtkKGR","WXAzM9YMOmFbbO1","4v1ma4KoDAtKKLj","lOy0DJlLdXT7qlG","WwPL8Zvvl2spWl","ssis-269","P8KmW6L6VAsbmd","ggz9o6MdjXTq7W7","MazPlVeokRUm339","zXDB6jdPP7ukwM","GK9oPwagdWh1R9l","opgl7gAV9bcK1R","QP3WZlZMaaT0DqM","r30Dx4p361fbDrB","lAVdOkqYrGHvxQ","8R9akj77k0togvY",
+]
+# for key in keys:
+url = f'https://raw.githubusercontent.com/popoYSL/asddsad/main/json/index.json'
+req = requests.get(url,timeout=10)
+indexList = json.loads(req.text)
+for indexDict in indexList:
+    if indexDict['linkid'] in keys:
+        folderName = indexDict['folderName']
+        m = re.findall(r"[a-zA-Z]+-\d+",folderName)
+        if(len(m)>0):
+            ids.append(m[0])
 with open('link.json',"r",encoding="utf-8") as f:
     links = json.load(f)
 with open('json/index.json',"r",encoding="utf-8") as f:
@@ -55,26 +68,3 @@ with open('link.json',"w",encoding="utf-8") as f:
     json.dump(linkDict,f)
 with open('json/index.json',"w",encoding="utf-8") as f:
     json.dump(indexList,f)
-# https://jable.tv/search/RAPD-004/
-# https://popovideo.vercel.app/play-video.html?v=KXy2l77KlRSbMR
-# login = '3d2cb17b4037b64a9cf3'
-# key = 'goX9YaPq0OTvZp'
-# parent_folder_id = 'KYRpxWMB3_k' 
-# data = streamtape.subfolder_conent(login,key,parent_folder_id)
-# folders = (data['result']['folders'])
-# for folder in folders:
-#     folderName = folder['name']
-#     m = re.findall(r"\S+-\d+",folderName)
-#     print(m)
-    # data = streamtape.subfolder_conent(login,key,folder['id'])
-    # print(data['result']['files'][0]['linkid'])
-
-# for k in links.keys():
-#     # print(links[k])
-#     req = requests.get(f'https://popovideo.vercel.app/play-video.html?v={k}')
-#     soup = BeautifulSoup(req.text,'html.parser')
-#     print(soup)
-#     folderName = soup.find(id = 'vid-title').text
-#     print(folderName)
-#     m = re.findall(r"\S+-\d+",folderName)
-#     print(m)
