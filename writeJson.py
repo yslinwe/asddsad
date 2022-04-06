@@ -195,7 +195,7 @@ def getFileInfo(fileDictInfo,thumbLinks,folderName,achorname,subscribe,avatarImg
     file['subscribe'] = subscribe
     file['avatar-img'] = avatarImg
     file["folderName"] = folderName
-    file["tags"] = list(jieba.cut(folderName))
+#     file["tags"] = list(jieba.cut(folderName))
     file['name'] = file['name'][:-4] #侧边标题名称
     file['link'] = "https://streamtape.com/e/"+file['linkid'] # 视频链接videoUrl
     linkid = file['linkid']
